@@ -59,6 +59,16 @@ class CControllerWidgetProblemsTagsView extends CControllerWidget {
 
 		$data = getSystemStatusData($filter);
 
+		// Beginning New Widget
+
+		// if ($fields['show_tags']) {
+		// 	$data['tags'] = makeTags($data['problems'], true, 'eventid', $fields['show_tags'], $fields['tags'],
+		// 		$fields['tag_name_format'], $fields['tag_priority']
+		// 	);
+		// }
+
+		// End New Widget
+
 		if ($filter['show_type'] == WIDGET_PROBLEMS_BY_SV_SHOW_TOTALS) {
 			$data['groups'] = getSystemStatusTotals($data);
 		}
