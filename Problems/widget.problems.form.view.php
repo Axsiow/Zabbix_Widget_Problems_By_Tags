@@ -22,6 +22,7 @@
 /**
  * Problems widget form view.
  */
+
 $fields = $data['dialogue']['fields'];
 
 $form = CWidgetHelper::createForm();

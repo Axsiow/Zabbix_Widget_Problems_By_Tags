@@ -75,6 +75,26 @@ $form_list->addRow(CWidgetHelper::getLabel($fields['tags']), CWidgetHelper::getT
 $scripts[] = $fields['tags']->getJavascript();
 $jq_templates['tag-row-tmpl'] = CWidgetHelper::getTagsTemplate($fields['tags']);
 
+	// Beginning New Widget
+
+// Show tags.
+$form_list-addRow(CWidgetHelper::getLabel($fields['show_tags']), CWidgetHelper::getRadioButtonList($fields['show_tags']));
+
+// Tag name.
+$form_list->addRow(CWidgetHelper::getLabel($fields['tag_name_format']),
+	CWidgetHelper::getRadioButtonList($fields['tag_name_format'])
+		->setEnable($fields['show_tags']->getValue() !== PROBLEMS_SHOW_TAGS_NONE)
+);
+
+// Tag display priority
+$form_list->addRow(CWidgetHelper::getLabel($fields['tag_priority']),
+	CWidgetHelper::getTextBox($fields['tag_priority'])
+		->setAttribute('placeholder', _('comma-separated list'))
+		->setEnable($fields['show_tags']->getValue() !== PROBLEMS_SHOW_TAGS_NONE)
+);
+
+	// End New Widget
+
 // Show type.
 $form_list->addRow(CWidgetHelper::getLabel($fields['show_type']), CWidgetHelper::getRadioButtonList($fields['show_type']));
 
