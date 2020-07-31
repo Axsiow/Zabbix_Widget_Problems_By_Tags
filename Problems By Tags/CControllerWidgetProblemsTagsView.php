@@ -61,11 +61,11 @@ class CControllerWidgetProblemsTagsView extends CControllerWidget {
 
 		// Beginning New Widget
 
-		// if ($fields['show_tags']) {
-		// 	$data['tags'] = makeTags($data['problems'], true, 'eventid', $fields['show_tags'], $fields['tags'],
-		// 		$fields['tag_name_format'], $fields['tag_priority']
-		// 	);
-		// }
+		if ($fields['show_tags']) {
+			$data['tags'] = makeTags($data['problems'], true, 'eventid', $fields['show_tags'], $fields['tags'],
+				$fields['tag_name_format'], $fields['tag_priority']
+			);
+		}
 
 		// End New Widget
 
